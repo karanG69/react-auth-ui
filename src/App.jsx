@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import { Routes, Route } from "react-router-dom";
-import Login from './components/login'
-import Signup from './components/signup'
-import Profile from './components/profile'
-import Home from './components/home'
+import Login from './components/Login'
+import Signup from './components/Signup'
+import Profile from './components/Profile'
+import Home from './components/Home'
 
 function App() {
   const [count, setCount] = useState(0)
