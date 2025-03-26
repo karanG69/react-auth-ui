@@ -14,13 +14,22 @@ const Login = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen">
-      <h2 className="text-xl mb-4">Login</h2>
-      <form onSubmit={handleSubmit} className="flex flex-col">
-        <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required className="border p-2 mb-2"/>
-        <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required className="border p-2 mb-2"/>
-        <button type="submit" className="bg-blue-500 text-white px-4 py-2">Login</button>
-      </form>
+    <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
+      <div className="bg-neutral-900 p-6 shadow-lg w-80 text-center flex flex-col justify-start h-full">
+        <h2 className="text-2xl font-semibold mb-3">Sign in to your PopX account</h2>
+        <p className="mb-6">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti sapiente</p>
+        <form onSubmit={handleSubmit} className="flex flex-col gap-3">
+          <div className='relative w-full'>
+            <label className="absolute -top-2.5 left-3 bg-neutral-900 px-1 text-xs text-gray-600">Email Address</label>
+            <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required className="w-full border p-2 mb-2 rounded-lg"/>  
+          </div>
+          <div className='relative w-full'>
+            <label className="absolute -top-2.5 left-3 bg-neutral-900 px-1 text-xs text-gray-600">Password</label>
+            <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required className="w-full border p-2 mb-2 rounded-lg"/>
+          </div>
+          <button type="submit" className="bg-gray-500 text-white px-4 py-2 rounded-lg">Login</button>
+        </form>
+      </div>
     </div>
   )
 }

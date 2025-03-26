@@ -24,14 +24,30 @@ const Signup = () => {
       };
     
   return (
-    <div className="flex flex-col items-center justify-center h-screen">
-      <h2 className="text-xl mb-4">Sign Up</h2>
-      <form onSubmit={handleSubmit} className="flex flex-col">
-        <input type="text" name="name" placeholder="Name" onChange={handleChange} required className="border p-2 mb-2"/>
-        <input type="text" name="phone" placeholder="Phone Number" onChange={handleChange} required className="border p-2 mb-2"/>
-        <input type="email" name="email" placeholder="Email" onChange={handleChange} required className="border p-2 mb-2"/>
-        <input type="password" name="password" placeholder="Password" onChange={handleChange} required className="border p-2 mb-2"/>
-        <input type="text" name="company" placeholder="Company" onChange={handleChange} required className="border p-2 mb-2"/>
+    <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
+        <div className="bg-neutral-900 p-6 shadow-lg w-80 text-center flex flex-col justify-start h-full">
+        <h2 className="text-2xl mb-4 font-semibold">Create your PopX account</h2>
+        <form onSubmit={handleSubmit} className="flex flex-col gap-3">
+        <div className='relative'>
+            <label className="absolute -top-2.5 left-3 bg-neutral-900 px-1 text-xs text-gray-600">Name</label>
+            <input type="text" name="name" placeholder="Name" onChange={handleChange} required className="w-full border p-2 mb-2 rounded-lg"/>
+        </div>
+        <div className='relative'>
+            <label className="absolute -top-2.5 left-3 bg-neutral-900 px-1 text-xs text-gray-600">Phone Number</label>
+            <input type="text" name="phone" placeholder="Phone Number" onChange={handleChange} required className="w-full border p-2 mb-2 rounded-lg"/>
+        </div>
+        <div className='relative'>
+            <label className="absolute -top-2.5 left-3 bg-neutral-900 px-1 text-xs text-gray-600">Email</label>
+            <input type="email" name="email" placeholder="Email" onChange={handleChange} required className="w-full border p-2 mb-2 rounded-lg"/>  
+        </div>
+        <div className='relative'>
+            <label className="absolute -top-2.5 left-3 bg-neutral-900 px-1 text-xs text-gray-600">password</label>
+            <input type="password" name="password" placeholder="Password" onChange={handleChange} required className="w-full border p-2 mb-2 rounded-lg"/>
+        </div>
+        <div className='relative'>
+            <label className="absolute -top-2.5 left-3 bg-neutral-900 px-1 text-xs text-gray-600">Company</label>
+            <input type="text" name="company" placeholder="Company" onChange={handleChange} required className="w-full border p-2 mb-2 rounded-lg"/>           
+        </div>
         <label>
           Are you an agency?
           <select name="agency" onChange={handleChange} className="border p-2 ml-2">
@@ -39,8 +55,9 @@ const Signup = () => {
             <option value="Yes">Yes</option>
           </select>
         </label>
-        <button type="submit" className="bg-green-500 text-white px-4 py-2 mt-4">Sign Up</button>
-      </form>
+        <button type="submit" className="rounded-lg bg-green-500 text-white px-4 py-2 mt-4">Create Accout</button>
+        </form>
+        </div>
     </div>
   )
 }
